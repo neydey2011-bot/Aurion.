@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AURION | Marketplace</title><link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="top"><a class="brand" href="/">AURION<span>.</span></a><nav><a href="#produtos">Produtos</a><a href="#parceiros">Seja parceiro</a><button id="cartBtn" class="outline">Carrinho (<b id="cartCount">0</b>)</button><button id="adminBtn" class="outline">Admin</button></nav></header>
+<section class="hero"><div><p class="eyebrow">MARKETPLACE • PARCERIAS • DESCOBERTAS</p><h1>Encontre algo<br><em>extraordinário.</em></h1><p>Produtos selecionados de lojas parceiras, em um só lugar.</p><a class="goldbtn" href="#produtos">Explorar produtos</a></div><div class="heroMark">A<span>/</span></div></section>
+<main>
+<section id="produtos"><div class="sectionHead"><div><p class="eyebrow">VITRINE AURION</p><h2>Produtos em destaque</h2></div><input id="search" placeholder="Buscar produto..."></div><div id="products" class="products"><p>Carregando produtos...</p></div></section>
+<section id="parceiros" class="partnerBox"><div><p class="eyebrow">CRESÇA COM A GENTE</p><h2>Tem uma loja?</h2><p>Cadastre sua loja para enviar produtos à equipe AURION. Os produtos passam por aprovação antes de aparecer na vitrine.</p></div><form id="partnerForm"><input name="name" placeholder="Nome da loja ou responsável" required><input name="email" type="email" placeholder="E-mail" required><input name="password" type="password" minlength="8" placeholder="Senha (mínimo 8 caracteres)" required><button class="goldbtn">Solicitar parceria</button><small id="partnerMsg"></small></form></section>
+</main>
+<footer> AURION <span>•</span> Marketplace independente. Produtos sujeitos à disponibilidade do parceiro.</footer>
+<div id="cartModal" class="modal"><div class="modalCard"><button class="close" data-close="cartModal">×</button><h2>Seu carrinho</h2><div id="cartItems"></div><hr><form id="checkout"><input name="name" placeholder="Seu nome" required><input name="email" type="email" placeholder="Seu e-mail (identifica o uso do cupom)" required><input name="phone" placeholder="Telefone" required><textarea name="address" placeholder="Endereço de entrega" required></textarea><div class="couponLine"><input name="coupon" placeholder="Cupom de desconto"><button type="button" id="applyCoupon" class="outline">Aplicar</button></div><small id="couponMsg"></small><button class="goldbtn">Enviar pedido</button><small id="orderMsg">O pedido ficará pendente até a loja confirmar pagamento e entrega.</small></form></div></div>
+<div id="adminModal" class="modal"><div class="modalCard"><button class="close" data-close="adminModal">×</button><h2>Painel administrativo</h2><form id="login"><input name="email" type="email" placeholder="E-mail administrativo" required><input name="password" type="password" placeholder="Senha" required><button class="goldbtn">Entrar</button></form><div id="adminPanel" hidden><h3>Criar cupom</h3><form id="couponForm"><input name="code" placeholder="Código (ex.: AURION10)" required><input name="discount_percent" type="number" min="1" max="90" placeholder="Desconto %" required><input name="max_uses" type="number" min="1" placeholder="Limite total de usos" required><input name="expires_at" type="date"><button class="goldbtn">Criar cupom</button></form><h3>Resumo da loja</h3><button id="refreshAdmin" class="outline">Atualizar painel</button><pre id="adminData"></pre></div><small id="adminMsg"></small></div></div>
+<script src="/app.js"></script>
+</body></html>
